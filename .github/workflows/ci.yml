@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Build
+        run: ./gradlew build --console=plain
+
+      - name: Add coverage summary
+        if: always()
+        run: |
+          report="build/reports/jacoco/test/jacocoTestReport.xml"
+          if [ ! -f "$report" ]; then
+            echo "Coverage report not found; the build likely failed before tests completed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          python3 - "$report" > "$RUNNER_TEMP/coverage-summary.md" <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+
+          try:
+              root = ET.parse(sys.argv[1]).getroot()
+          except (OSError, ET.ParseError) as error:
+              print(f"Could not read the coverage report: {error}")
+              sys.exit(0)
+
+          counters = {counter.get("type"): counter for counter in root.findall("counter")}
+
+          print("## Coverage")
+          print()
+          print("| Metric | Covered | Missed | Coverage |")
+          print("| --- | ---: | ---: | ---: |")
+          for kind in ("LINE", "BRANCH"):
+              counter = counters.get(kind)
+              if counter is None:
+                  continue
+              covered = int(counter.get("covered"))
+              missed = int(counter.get("missed"))
+              total = covered + missed
+              ratio = f"{100.0 * covered / total:.1f}%" if total else "n/a"
+              print(f"| {kind.title()} | {covered} | {missed} | {ratio} |")
+          PY
+          cat "$RUNNER_TEMP/coverage-summary.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload test and coverage reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: test-reports
+          path: |
+            build/reports/tests/test
+            build/reports/jacoco/test/html
+            build/reports/jacoco/test/jacocoTestReport.xml
+          if-no-files-found: ignore
+          retention-days: 7

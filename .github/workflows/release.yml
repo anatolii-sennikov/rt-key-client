@@ -1,0 +1,116 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Serialize releases so a manual run and a tag push cannot publish concurrently.
+concurrency:
+  group: maven-central-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish to Maven Central
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # Configure required reviewers for the "release" environment in repository settings.
+    environment:
+      name: release
+      url: https://central.sonatype.com/publishing/deployments
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify manual run is from main
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          if [ "${GITHUB_REF}" != "refs/heads/main" ]; then
+            echo "::error::Run this workflow from the main branch, not ${GITHUB_REF}."
+            exit 1
+          fi
+
+      - name: Verify tag is based on main
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          if ! git merge-base --is-ancestor "${GITHUB_SHA}^{commit}" origin/main; then
+            echo "::error::Tag ${GITHUB_REF_NAME} points to a commit that is not an ancestor of origin/main."
+            exit 1
+          fi
+          echo "Tag ${GITHUB_REF_NAME} is based on main."
+
+      - name: Verify tag matches project version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version="$(sed -n 's/^version=//p' gradle.properties)"
+          if [ "v${version}" != "${GITHUB_REF_NAME}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match project version ${version}."
+            exit 1
+          fi
+          echo "Releasing version ${version}."
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Build and test
+        run: ./gradlew build --console=plain
+
+      - name: Check that version is not already published
+        run: |
+          version="$(sed -n 's/^version=//p' gradle.properties)"
+          url="https://repo1.maven.org/maven2/io/github/anatolii-sennikov/rt-key-client/${version}/rt-key-client-${version}.pom"
+          if curl --silent --fail --head "$url" > /dev/null; then
+            echo "::error::Version ${version} is already published on Maven Central."
+            exit 1
+          fi
+          echo "Version ${version} is not published yet, continuing."
+
+      - name: Publish to Central Portal
+        run: ./gradlew publishAggregationToCentralPortal --console=plain
+        env:
+          CENTRAL_PORTAL_USERNAME: ${{ secrets.CENTRAL_PORTAL_USERNAME }}
+          CENTRAL_PORTAL_PASSWORD: ${{ secrets.CENTRAL_PORTAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
+
+      - name: Add release summary
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          if [ "$JOB_STATUS" = "success" ]; then
+            cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## Deployment uploaded
+
+          The publication was uploaded with `publishingType = USER_MANAGED`.
+
+          1. Open https://central.sonatype.com/publishing/deployments
+          2. Review the deployment and press **Publish**.
+          3. Wait for the artifact to appear on Maven Central.
+          4. Create the GitHub Release for this version.
+          EOF
+          else
+            cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          ## Release failed
+
+          The workflow did not complete the publication. Check the failed step above:
+          https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Maven Central deployments: https://central.sonatype.com/publishing/deployments
+          EOF
+          fi
