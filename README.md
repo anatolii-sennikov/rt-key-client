@@ -1,7 +1,9 @@
 # rt-key-client
 
-![Java](https://img.shields.io/badge/Java-21%2B-orange)
-![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+[![CI](https://github.com/anatolii-sennikov/rt-key-client/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/anatolii-sennikov/rt-key-client/actions/workflows/ci.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.anatolii-sennikov/rt-key-client?label=Maven%20Central&logo=apachemaven)](https://central.sonatype.com/artifact/io.github.anatolii-sennikov/rt-key-client)
+[![Java](https://img.shields.io/badge/Java-21%2B-orange?logo=openjdk)](https://openjdk.org/projects/jdk/21/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
 Неофициальный лёгкий Java клиент для API домофонов Ростелеком Ключ.
 Подходит для автоматизации, ботов, написания кастомных интерфейсов или интеграции с Home Assistant через MQTT или REST.
