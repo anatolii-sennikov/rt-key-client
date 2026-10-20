@@ -1,0 +1,39 @@
+{
+  "request_id": "88f20968-ffba-4bbd-ad92-fe1b145aea16",
+  "data": {
+    "items": [
+      {
+        "id": 22349991,
+        "code": "99014",
+        "type": "emergency",
+        "title": null,
+        "flat": null,
+        "company": null,
+        "owner_type": "system",
+        "owner": null,
+        "creator_type": "system",
+        "creator": null,
+        "created_at": "2025-11-07T18:36:06Z",
+        "begin_at": "2025-11-07T18:36:06Z",
+        "expires_at": "2025-11-14T18:36:06Z",
+        "statuses": [
+          {
+            "device": {
+              "id": 65758,
+              "company": {
+                "id": 3399
+              },
+              "type": "intercom",
+              "title": "подъезд №4",
+              "full_code": null,
+              "call_number": null
+            },
+            "status_changed_at": "2025-11-07T18:36:06Z",
+            "status": "loaded"
+          }
+        ]
+      }
+    ]
+  },
+  "error": null
+}

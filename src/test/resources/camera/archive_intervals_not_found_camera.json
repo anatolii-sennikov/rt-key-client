@@ -1,0 +1,22 @@
+{
+  "data": null,
+  "error": {
+    "id": "qqqd7464-111-4863-2222-214be9d0c615",
+    "message": "Ошибка в продукте Ключ в сервисе взаимодействия с Видеоплатформой",
+    "occurred_at": "2025-10-17T03:48:48.123Z",
+    "product": "key",
+    "reasons": [
+      {
+        "type": "processing_error",
+        "message": "Объект не найден",
+        "details": [
+          {
+            "property": "camera_id"
+          }
+        ]
+      }
+    ],
+    "service": "key_vc"
+  },
+  "request_id": "qqqd7464-111-4863-2222-214be9d0c615"
+}

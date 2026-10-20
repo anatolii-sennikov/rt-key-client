@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "object_not_found",
+    "description": "device has no connection with flat",
+    "title": "Устройство не связано с квартирой"
+  }
+}

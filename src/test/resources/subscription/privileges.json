@@ -1,0 +1,202 @@
+[
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "9",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "9",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "9",
+        "type": "INTERCOM_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "8",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "8",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "8",
+        "type": "INTERCOM_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "69",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "69",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "69",
+        "type": "INTERCOM_OPEN",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "69",
+        "type": "INTERCOM_USE",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "6668",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "6",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "6",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "6",
+        "type": "INTERCOM_OPEN",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "6",
+        "type": "INTERCOM_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "5",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "5",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "5",
+        "type": "INTERCOM_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "4",
+        "type": "INTERCOM_CALLREDIRECT_PSTN",
+        "stateType": "PAID"
+      }
+    }
+  },
+  {
+    "result": {
+      "data": {
+        "orpon": "777555111222",
+        "flatNumber": "4",
+        "type": "INTERCOM_RFID_USE",
+        "stateType": "CAN_BE_PAID"
+      }
+    }
+  }
+]

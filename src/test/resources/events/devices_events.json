@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "device_id": 11133,
+      "device_type": "intercom",
+      "user_id": 1771999,
+      "timestamp": "2025-11-10T12:05:27Z",
+      "event_type": 11,
+      "event_name": "Открыта основная дверь с помощью удаленного доступа",
+      "code": "",
+      "flat_number": "11"
+    },
+    {
+      "device_id": 11133,
+      "device_type": "intercom",
+      "user_id": 1771999,
+      "timestamp": "2025-11-10T11:29:13Z",
+      "event_type": 11,
+      "event_name": "Открыта основная дверь с помощью удаленного доступа",
+      "code": "",
+      "flat_number": "11"
+    },
+    {
+      "device_id": 11133,
+      "device_type": "intercom",
+      "user_id": 1771999,
+      "timestamp": "2025-11-10T09:44:16Z",
+      "event_type": 11,
+      "event_name": "Открыта основная дверь с помощью удаленного доступа",
+      "code": "",
+      "flat_number": "11"
+    }
+  ]
+}

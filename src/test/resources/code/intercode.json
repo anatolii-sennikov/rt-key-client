@@ -1,0 +1,20 @@
+{
+  "data": {
+    "intercode": {
+      "id": 24223091,
+      "code": "84072",
+      "start_date": "2026-10-10T04:04:59.106587Z",
+      "end_date": "2026-10-11T04:04:59.106587Z",
+      "inter_code_type": "temporary",
+      "common": true,
+      "statuses": [
+        {
+          "device_id": "55119",
+          "device_type": "intercom",
+          "status": "loaded",
+          "title": "piupiu"
+        }
+      ]
+    }
+  }
+}

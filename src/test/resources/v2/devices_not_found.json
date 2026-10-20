@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "device_not_found",
+    "description": "device not found, id: 288",
+    "title": "Устройство не найдено"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "request_id": "990c8f0c-bfq6-4cd8-9811-be54aqw3f993",
+  "data": null,
+  "error": {
+    "id": "111cc21f-7e1c-99df-ab16-b5563f3aqs80",
+    "request_id": "990c8f0c-bfq6-4cd8-9811-be54aqw3f993",
+    "product": "key",
+    "service": "household",
+    "message": "Ошибка в продукте Ключ в сервисе Домохозяйств",
+    "occurred_at": "2025-11-10T08:53:06Z",
+    "reasons": [
+      {
+        "type": "processing_error",
+        "message": "Переданы невалидные данные",
+        "details": [
+          {
+            "description": "flat without devices",
+            "device_ids": [
+              1111
+            ],
+            "flat_id": 11155995
+          }
+        ]
+      }
+    ]
+  }
+}

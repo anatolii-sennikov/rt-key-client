@@ -1,0 +1,112 @@
+{
+  "request_id": "111b1acd-1e11-7777-b00c-777999222222",
+  "data": {
+    "id": 1491111,
+    "type": "master",
+    "login": "rtkid_9999888877661",
+    "phone_number": "+79999999999",
+    "email": null,
+    "invoice_email": null,
+    "status": "active",
+    "is_new": true,
+    "sso_id": "f:8754604g-a87a-9999-961e-c34c93e5au5c:22222222",
+    "mos_sso_id": null,
+    "sso_user_id": 22222222,
+    "sso_linked": true,
+    "ory_id": "QQQzdGVyOjEzQQI5OTc6MjQ4NDY5MjoxQQQzOjQ0MTk3Ojc6NDc6RlBOeVJtMnRwSjZXQ0dUqqqqRkNIMkQYMlJkRHRQMHh3YzY4Y0dPZHVnZz0=",
+    "vc_id": 7774444,
+    "ustore_id": 724093,
+    "mrf_id": 4,
+    "rf_id": 56,
+    "company": {
+      "id": 1683,
+      "vc_id": 55702,
+      "title": "ООО ДЕЛАЕМ МИР ЛУЧШЕ",
+      "utc_offset": 180,
+      "link_title": null,
+      "ios_deep_link": null,
+      "ios_app_store_link": null,
+      "android_package_id": null,
+      "huawei_appgallery_package_name": null,
+      "web_link": null,
+      "link_description": null
+    },
+    "description": null,
+    "creator_user_id": 55555,
+    "created_by": "mrf",
+    "phone_number_verified": true,
+    "email_verified": false,
+    "created_at": "2026-01-01T18:11:48Z",
+    "archived_at": null,
+    "updated_at": "2026-04-01T01:54:18Z",
+    "activated_at": "2026-04-23T17:15:59Z",
+    "buildings": [
+      {
+        "id": 9999,
+        "mrf_id": 4,
+        "rf_id": 56,
+        "place": "г. ВЕХНИЕ ПИРОЖКИ",
+        "street": "ул. ВЛАСТЕЛИНА КОЛЕЦ, д. 156/24",
+        "numbering": null,
+        "fias_id": null,
+        "orpon_id": 223555244,
+        "company_id": 1683,
+        "utc_offset": 180,
+        "kladr_id": "9807770122224490436",
+        "entrances": [
+          {
+            "id": "1",
+            "name": "1",
+            "floors": [
+              {
+                "id": "1",
+                "name": "1",
+                "flats": [
+                  {
+                    "id": 77355775,
+                    "company_id": 1683,
+                    "name": "750",
+                    "area": 0,
+                    "account": null,
+                    "sips": [],
+                    "tfop_phones": [],
+                    "user_settings": {
+                      "redirect_to_mobile_application": true,
+                      "devices_call_redirect_to_pstn": false,
+                      "devices_call_redirect_to_sip": true
+                    },
+                    "type": "apartment",
+                    "room_permissions": {
+                      "barriers_full_code_generate_behavior": false,
+                      "devices_call_redirect_to_mobile_app_behavior": true,
+                      "devices_call_redirect_to_pstn_behavior": false,
+                      "devices_call_redirect_to_sip_behavior": false,
+                      "devices_call_to_cms_phones_behavior": false,
+                      "devices_rfids_access_control_panel_access_behavior": false,
+                      "devices_rfids_barrier_access_behavior": false,
+                      "devices_rfids_intercom_access_behavior": true,
+                      "fr_intercom_access_behavior": false
+                    },
+                    "actions_permissions": [
+                      "delete_devices_rfids_intercom",
+                      "get_devices_intercom",
+                      "get_devices_rfids_intercom",
+                      "post_devices_open_intercom",
+                      "get_devices_camera_intercom",
+                      "post_devices_rfids_intercom"
+                    ],
+                    "is_subscription_enable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "env_url": null,
+    "owner_user_id": null,
+    "scope": null
+  },
+  "error": null
+}

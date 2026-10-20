@@ -1,0 +1,24 @@
+{
+  "request_id": "d71eac95-b703-4ead-b265-be6477a5634d",
+  "data": null,
+  "error": {
+    "id": "4f0f5b03-4d75-47d9-a3e3-b9064584225e",
+    "request_id": "d71eac95-b703-4ead-b265-be6477a5634d",
+    "product": "key",
+    "service": "household",
+    "message": "Ошибка в продукте Ключ в сервисе Домохозяйств",
+    "occurred_at": "2026-10-10T08:52:09Z",
+    "reasons": [
+      {
+        "type": "processing_error",
+        "message": "Переданы невалидные данные",
+        "details": [
+          {
+            "description": "unknown flat",
+            "flat_id": 122212341234
+          }
+        ]
+      }
+    ]
+  }
+}

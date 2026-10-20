@@ -1,0 +1,23 @@
+{
+  "request_id": "qw763d6a-qqf3-67a6-895q-13q23q394b0q",
+  "data": null,
+  "error": {
+    "id": "e55232cb-3e2e-4814-8ba0-8b00q32e9qq4",
+    "request_id": "dc203d6a-zzz3-78a6-995a-14b23z394e0e",
+    "product": "key",
+    "service": "household",
+    "message": "Ошибка в продукте Ключ в сервисе Домохозяйств",
+    "occurred_at": "2025-11-10T06:14:45Z",
+    "reasons": [
+      {
+        "type": "processing_error",
+        "message": "Объект не найден",
+        "details": [
+          {
+            "description": "device has no connection with flat"
+          }
+        ]
+      }
+    ]
+  }
+}

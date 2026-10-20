@@ -1,0 +1,40 @@
+{
+  "request_id": "f8c3d291-7b46-4e50-a1d8-93c5f72e6b04",
+  "data": {
+    "items": [
+      {
+        "id": 58391724,
+        "code": "38291",
+        "type": "emergency",
+        "title": null,
+        "flat": null,
+        "company": null,
+        "owner_type": "system",
+        "owner": null,
+        "creator_type": "system",
+        "creator": null,
+        "created_at": "2025-09-12T06:48:23Z",
+        "begin_at": "2025-09-12T06:48:23Z",
+        "expires_at": "2025-09-19T06:48:23Z",
+        "statuses": [
+          {
+            "device": {
+              "id": 47283,
+              "company": {
+                "id": 2951
+              },
+              "type": "intercom",
+              "title": "корпус №3",
+              "full_code": null,
+              "call_number": null
+            },
+            "status_changed_at": "2025-09-12T06:48:23Z",
+            "status": "loaded"
+          }
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "error": null
+}

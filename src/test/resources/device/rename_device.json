@@ -1,0 +1,80 @@
+{
+  "data": {
+    "device": {
+      "id": "99911",
+      "device_type": "intercom",
+      "serial_number": "1c555550qwe2",
+      "device_group": [
+        "Калитка"
+      ],
+      "utc_offset_minutes": 180,
+      "camera_id": "27d056d3-c00f-42c6-8a42-ad0d3905117a",
+      "description": "подъезд №1",
+      "is_favorite": false,
+      "is_active": true,
+      "name_by_company": "подъезд №1",
+      "name_by_user": "new name",
+      "accept_concierge_call": false,
+      "capabilities": [
+        {
+          "name": "temporary_key",
+          "setup": true
+        },
+        {
+          "name": "constant_key",
+          "setup": true
+        },
+        {
+          "name": "sip_calls",
+          "setup": true
+        },
+        {
+          "name": "open_door",
+          "setup": true
+        },
+        {
+          "name": "dtmf_code",
+          "setup": true
+        },
+        {
+          "name": "sip_video",
+          "setup": true
+        },
+        {
+          "name": "ntp",
+          "setup": true
+        },
+        {
+          "name": "syslog",
+          "setup": true
+        },
+        {
+          "name": "autocollect",
+          "setup": true
+        },
+        {
+          "name": "emergency_door",
+          "setup": true
+        },
+        {
+          "name": "gate",
+          "setup": true
+        },
+        {
+          "name": "reinstall",
+          "setup": true
+        }
+      ],
+      "inter_codes": [
+        {
+          "id": 99911177,
+          "code": "99772",
+          "start_date": "2025-11-10T04:04:59.106587Z",
+          "end_date": "2025-11-11T04:04:59.106587Z",
+          "inter_code_type": "temporary",
+          "common": true
+        }
+      ]
+    }
+  }
+}

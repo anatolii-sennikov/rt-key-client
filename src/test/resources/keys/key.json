@@ -1,0 +1,15 @@
+{
+  "data": {
+    "key": {
+      "id": 55552501,
+      "name": "My awesome key",
+      "code": "4457262AEB6D01",
+      "start_date": "2025-09-28T21:38:38.275328213Z",
+      "end_date": null,
+      "flat_id": 55554411,
+      "created_by": "tenant",
+      "description": "",
+      "devices": null
+    }
+  }
+}

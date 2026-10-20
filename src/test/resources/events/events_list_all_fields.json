@@ -1,0 +1,43 @@
+{
+  "request_id": "0f3d2c1b-4a59-4e68-8b77-6c5d4e3f2a11",
+  "data": {
+    "items": [
+      {
+        "raised_at": "2025-05-06T07:08:09Z",
+        "event_type": "door_open",
+        "device_id": 101,
+        "device_type": "intercom",
+        "company_id": 202,
+        "room_id": 303,
+        "relay": 4,
+        "user_id": 404,
+        "user_agent": "rt-key-test-agent/1.0",
+        "building_id": 505,
+        "orpon_id": 606,
+        "room_number": "77",
+        "ivr_phone_number": "+74951110001",
+        "guest_phone_number": "+74951110002",
+        "code": "1234",
+        "rfid": "0011223344AA",
+        "request_id": "req-777",
+        "dtmf_phone_number": "+74951110003",
+        "device_user_type": "tenant",
+        "login": "user-login",
+        "password": "user-password",
+        "host": "10.0.0.7",
+        "device_model": "Sputnik-3",
+        "os": "Android 14",
+        "push_token": "push-token-abc",
+        "code_id": 808,
+        "rfid_id": 909,
+        "camera_uid": "777bcaa6-2222-4444-8888-5b92bc6808e5",
+        "screenshot_url": "https://media.example/screenshot.jpg",
+        "car_number": "А123ВС77",
+        "vehicle": "sedan",
+        "courier_company_name": "Курьер Сервис",
+        "order_number": "ORD-42",
+        "courier_id": "courier-13"
+      }
+    ]
+  }
+}

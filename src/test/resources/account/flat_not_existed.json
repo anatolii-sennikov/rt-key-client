@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "object_not_found",
+    "description": "not exists user flat relation",
+    "title": "Неверно указана квартира"
+  }
+}

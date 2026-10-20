@@ -1,0 +1,35 @@
+{
+  "request_id": "2b52d59a-a8ae-498b-b5bf-c5c3cf25b7ac",
+  "data": {
+    "items": [
+      {
+        "id": 55577780,
+        "title": "Ключ мой ключ ",
+        "key": "0447222AEB6D55",
+        "room_ids": [
+          77705511
+        ],
+        "device_ids": [
+          20001
+        ],
+        "owner_type": "master",
+        "pay_type": "free",
+        "device_statuses": [
+          {
+            "device_id": 11558,
+            "rfid_id": 22233344,
+            "status": "loaded",
+            "updated_at": "2025-11-10T16:20:09Z"
+          }
+        ],
+        "building_ids": [
+          9911
+        ],
+        "created_at": "2025-11-10T16:18:54Z",
+        "updated_at": "2025-11-10T19:20:08Z"
+      }
+    ],
+    "total": 1
+  },
+  "error": null
+}

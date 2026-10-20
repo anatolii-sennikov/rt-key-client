@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "uid": "777bcaa6-2222-4444-8888-5b92bc6808e5",
+      "category": {
+        "id": 2,
+        "type": "intercom",
+        "title": "Домофон"
+      },
+      "title": "Джеймс05/007",
+      "serialNumber": "",
+      "ip": "0.0.0.0",
+      "streamerUrl": "https://live-vdk4.camera.rt.ru/blue7",
+      "mac": "00:00:00:00:00:00",
+      "model": "",
+      "vendor": "",
+      "status": {
+        "id": 1,
+        "type": "online",
+        "title": "Доступна"
+      },
+      "screenshotUrlTemplate": "https://media-vdk4.camera.rt.ru/image/{size}/7a327c4a-3b40-4ccb-a9fe-5efbeaa8e1a4/{timestamp}.jpg?token={cdn_token}",
+      "screenshotPreciseUrlTemplate": "https://media-vdk4.camera.rt.ru/image/precise/{size}/7a327c4a-3b40-4ccb-a9fe-5efbeaa8e1a4/{timestamp}.jpg?token={cdn_token}",
+      "userToken": "token.user.",
+      "streamerToken": "stream.token.secret",
+      "screenshotToken": "screen.token.secrtet",
+      "archiveLength": 10080,
+      "location": null,
+      "createdAt": "2023-02-13T14:19:48Z",
+      "updatedAt": "2025-01-26T11:44:13Z",
+      "utcOffset": 180
+    }
+  ],
+  "error": null
+}

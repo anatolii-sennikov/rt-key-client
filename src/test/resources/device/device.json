@@ -1,0 +1,73 @@
+{
+  "request_id": "8fb5774f-7750-4fda-82c8-72dc9b6d1afe",
+  "data": {
+    "items": [
+      {
+        "id": 11155,
+        "company_id": 4567,
+        "access_company_ids": [
+          3345
+        ],
+        "access_building_ids": [
+          9913
+        ],
+        "flatgramm_ids": [
+          4455
+        ],
+        "device_type": "intercom",
+        "model_type": "qtech",
+        "serial_number": "9d220453qwe2",
+        "mac": "0c:33:45:12:we:f5",
+        "title": "подъезд №1",
+        "host": "127.00.00.01",
+        "status_type": "online",
+        "sw_version": "111.111.11.11",
+        "hw_version": "111.0",
+        "kkm": false,
+        "settings": {
+          "autocollect": {},
+          "code": {},
+          "door": {},
+          "dtmf": {},
+          "emergency_door": {
+            "status_type": "closed",
+            "final_status_type": "closed",
+            "status_at": "0001-01-01T00:00:00Z",
+            "status_error": "",
+            "status_retry_count": 0
+          },
+          "gate": {},
+          "ntp": {},
+          "rfid": {},
+          "sip": {},
+          "syslog": {}
+        },
+        "sync_status_type": "sync_success",
+        "sync_at": "2025-11-05T18:06:12Z",
+        "sync_error": null,
+        "sync_retry_count": 0,
+        "successful_sync_at": "2025-11-05T18:06:12Z",
+        "is_autochange_password_enabled": null,
+        "tags": [],
+        "device_user_types": null,
+        "trunk_account": {
+          "abc_number": "+71234567890",
+          "host": "11.1.11.11",
+          "port": 1111,
+          "sip_type": "ngn"
+        },
+        "redirect": {
+          "sip_redirect": true,
+          "phone_redirect": true
+        },
+        "is_dispatched": false,
+        "public_identity": null,
+        "camera_uid": "efe45ee2-8c3b-41a0-8b22-e2702db6087e",
+        "camera_status": "processing_error",
+        "camera_error": "URL имеет неверное значение"
+      }
+    ],
+    "total": 1
+  },
+  "error": null
+}

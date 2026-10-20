@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "flat_not_found",
+    "description": "Квартира не найдена",
+    "title": "Квартира не найдена"
+  }
+}
